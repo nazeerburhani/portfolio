@@ -31,8 +31,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.className += ' js';</script>
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
   <!-- ================= Header ================= -->
   <header class="site-header" id="siteHeader">
@@ -79,27 +81,29 @@
       </div>
       <div class="container hero-inner">
         <div class="hero-text">
-        <div class="hero-badge reveal"><span class="dot"></span> Now taking projects — limited slots</div>
-        <h1 class="reveal reveal-d1">Nazeer <span class="gold">Ahmad</span></h1>
-        <p class="role reveal reveal-d2">Custom Software &amp; Premium Websites That Make You Money</p>
-        <p class="lede reveal reveal-d3">I'm <strong>Nazeer Ahmad</strong> — I personally design and build <strong>custom software, premium websites, and marketing engines</strong> for businesses that want more customers and less chaos. One partner, zero middlemen, and a fixed quote before we start.</p>
-        <div class="hero-ctas reveal reveal-d4">
+        <div class="hero-badge"><span class="dot"></span> Now taking projects — limited slots</div>
+        <h1>Nazeer <span class="gold">Ahmad</span></h1>
+        <p class="role">Custom Software &amp; Premium Websites That Make You Money</p>
+        <p class="lede">I'm <strong>Nazeer Ahmad</strong> — I personally design and build <strong>custom software, premium websites, and marketing engines</strong> for businesses that want more customers and less chaos. One partner, zero middlemen, and a fixed quote before we start.</p>
+        <div class="hero-ctas">
           <a class="btn btn-gold" href="https://wa.me/923419781283?text=Hi%20Nazeer%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.5 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
             Claim Your Free Consultation
           </a>
           <a class="btn btn-ghost" href="#services">See What I Build</a>
         </div>
-        <div class="hero-stats reveal reveal-d4">
+        <div class="hero-stats">
           <div class="stat"><b>Fixed quote</b><span>No surprises, ever</span></div>
           <div class="stat"><b>Free preview</b><span>You approve before you pay</span></div>
           <div class="stat"><b>Direct WhatsApp</b><span>I reply within hours</span></div>
         </div>
         </div>
-        <figure class="hero-photo reveal reveal-d2">
+        <div class="hero-photo-wrap">
+        <figure class="hero-photo">
           <img src="images/nazeer-ahmad-1.jpg" alt="Nazeer Ahmad — Software Developer & Digital Growth Partner" fetchpriority="high" />
           <figcaption><span class="dot"></span> Nazeer Ahmad</figcaption>
         </figure>
+        </div>
       </div>
       <div class="scroll-hint" aria-hidden="true">Scroll</div>
     </section>
@@ -115,7 +119,7 @@
     <!-- ================= About ================= -->
     <section class="section about" id="about">
       <div class="container about-inner">
-        <figure class="about-photo reveal">
+        <figure class="about-photo reveal reveal-left">
           <img src="images/nazeer-ahmad-2.jpg" alt="Nazeer Ahmad" loading="lazy" />
         </figure>
         <div class="about-text">
@@ -137,10 +141,10 @@
         <h2 class="section-title reveal">Two people. <span class="gold">One obsession: your growth.</span></h2>
         <p class="section-sub reveal">You'll always know exactly who is building your project — meet the team behind the work.</p>
 
-        <div class="team-grid">
+        <div class="team-grid" data-stagger>
           <article class="team-card reveal">
             <figure class="team-photo">
-              <img src="images/nazeer-ahmad-2.jpg" alt="Nazeer Ahmad — Founder" loading="lazy" />
+              <img src="images/nazeer-ahmad-3.jpg" alt="Nazeer Ahmad — Founder" loading="lazy" />
             </figure>
             <div class="team-body">
               <h3>Nazeer Ahmad</h3>
@@ -149,8 +153,8 @@
             </div>
           </article>
           <article class="team-card reveal reveal-d1">
-            <figure class="team-photo team-photo--placeholder">
-              <span class="team-monogram" aria-hidden="true">MT</span>
+            <figure class="team-photo">
+              <img src="images/muhammad-tauqeer.jpg" alt="Muhammad Tauqeer — Co-founder" loading="lazy" style="object-position: top;" />
             </figure>
             <div class="team-body">
               <h3>Muhammad Tauqeer</h3>
@@ -169,7 +173,7 @@
         <h2 class="section-title reveal">Everything your business needs <span class="gold">to win more customers</span></h2>
         <p class="section-sub reveal">One dedicated partner for the software that runs your business, the website that sells for you, and the marketing that fills your pipeline.</p>
 
-        <div class="services-grid">
+        <div class="services-grid" data-stagger>
           <!-- Service 1 -->
           <article class="service-card reveal">
             <span class="service-num">01</span>
@@ -259,7 +263,7 @@
         <h2 class="section-title reveal">Zero risk, <span class="gold">zero guesswork</span></h2>
         <p class="section-sub reveal">A fixed quote before we start. Your approval at every step. Nothing goes live until you're happy.</p>
 
-        <div class="process-steps">
+        <div class="process-steps" data-stagger>
           <div class="step reveal">
             <span class="step-ghost" aria-hidden="true">01</span>
             <span class="step-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
@@ -316,7 +320,7 @@
         <h2 class="section-title reveal">One partner. <span class="gold">No middlemen.</span></h2>
         <p class="section-sub reveal">When you work with me, you talk directly to the person building your project — not a sales rep, not a ticket queue.</p>
 
-        <div class="why-grid">
+        <div class="why-grid" data-stagger>
           <div class="why-card reveal">
             <div class="why-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l2-5.4a8.3 8.3 0 0 1-1-4.1A8.4 8.4 0 0 1 12.5 3 8.4 8.4 0 0 1 21 11.5z"/></svg>
@@ -360,7 +364,7 @@
         <h2 class="section-title reveal">Imagine it. <span class="gold">I'll build it.</span></h2>
         <p class="section-sub reveal">The kinds of projects I take on — every one designed around your business, never a template.</p>
 
-        <div class="work-grid">
+        <div class="work-grid" data-stagger>
           <article class="work-card reveal">
             <div class="work-visual wv-1">
               <span class="work-tag">Software</span>
@@ -448,7 +452,7 @@
         <h2 class="section-title reveal">Questions? <span class="gold">Answered.</span></h2>
         <p class="section-sub reveal">The things clients ask me most before we start working together.</p>
 
-        <div class="faq-list">
+        <div class="faq-list" data-stagger>
           <div class="faq-item reveal">
             <button class="faq-q" aria-expanded="false">
               How do you price your work?
@@ -570,6 +574,10 @@
   </footer>
 
   <!-- ================= Floating / sticky CTAs ================= -->
+  <button class="to-top" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
   <a class="wa-float" href="https://wa.me/923419781283?text=Hi%20Nazeer%2C%20I%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.5 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
   </a>
