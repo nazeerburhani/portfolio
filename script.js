@@ -47,6 +47,21 @@
     revealEls.forEach(function (el) { el.classList.add("visible"); });
   }
 
+  /* ---------- Sticky bar: hide while contact section is in view ---------- */
+  var stickyBar = document.querySelector(".sticky-cta");
+  var contactSec = document.getElementById("contact");
+  if (stickyBar && contactSec && "IntersectionObserver" in window) {
+    var barIO = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          stickyBar.classList.toggle("bar-hidden", entry.isIntersecting);
+        });
+      },
+      { threshold: 0.08 }
+    );
+    barIO.observe(contactSec);
+  }
+
   /* ---------- FAQ accordion ---------- */
   var faqItems = document.querySelectorAll(".faq-item");
   faqItems.forEach(function (item) {
