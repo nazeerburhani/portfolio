@@ -181,9 +181,19 @@
           else addWord(part, parent);
         });
       } else if (node.nodeType === 1) {
-        var clone = node.cloneNode(false);
-        Array.prototype.slice.call(node.childNodes).forEach(function (c) { process(c, clone); });
-        parent.appendChild(clone);
+        if (node.classList && node.classList.contains("gold")) {
+          // Keep shimmer text atomic: splitting it into nested word spans
+          // breaks background-clip:text and makes the words invisible.
+          var w = document.createElement("span"); w.className = "w";
+          var wi = document.createElement("span"); wi.className = "wi";
+          wi.style.setProperty("--i", idx++);
+          wi.appendChild(node.cloneNode(true));
+          w.appendChild(wi); parent.appendChild(w);
+        } else {
+          var clone = node.cloneNode(false);
+          Array.prototype.slice.call(node.childNodes).forEach(function (c) { process(c, clone); });
+          parent.appendChild(clone);
+        }
       }
     }
     var frag = document.createDocumentFragment();
