@@ -253,8 +253,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.18; letter-spa
 }
 .team-card:hover { transform: translateY(-6px); border-color: var(--line); box-shadow: 0 24px 60px rgba(0,0,0,0.45); }
 .team-card:hover::before { opacity: 1; }
-.team-photo { margin: 0; aspect-ratio: 4/3; overflow: hidden; position: relative; }
-.team-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
+.team-photo { margin: 0; aspect-ratio: 4/5; overflow: hidden; position: relative; }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; transition: transform 0.6s var(--ease); }
 .team-card:hover .team-photo img { transform: scale(1.04); }
 .team-photo--placeholder {
   display: flex; align-items: center; justify-content: center;
@@ -712,6 +712,10 @@ footer { padding: 44px 0 120px; padding-bottom: calc(120px + env(safe-area-inset
 .reveal.reveal-scale { transform: scale(0.9); }
 .reveal.reveal-clip { transform: none; opacity: 1; clip-path: inset(0 0 100% 0); transition: clip-path 1.05s var(--ease); }
 .reveal.reveal-clip.visible { clip-path: inset(0 0 0% 0); }
+/* Visible state must override the directional offsets (same specificity, later in file) */
+.reveal.reveal-left.visible,
+.reveal.reveal-right.visible { transform: translate(0, 0); opacity: 1; }
+.reveal.reveal-scale.visible { transform: scale(1); opacity: 1; }
 
 /* ---------- Eyebrow line draw ---------- */
 .eyebrow::before {
